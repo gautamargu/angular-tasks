@@ -1,39 +1,52 @@
-<div class="form">
-    <h4 id="registration">Your Detail</h4>
-    <form (ngSubmit)="onSubmit()" #myForm="ngForm">
-  
-        <div ngModelGroup="personDetails" #personalDetail="ngModelGroup">
-          <label for="name">Name</label>
-          <input type="text" id="name" placeholder="Your name.."
-          name="name" ngModel required #fname="ngModel">
-          
-          <label for="address">Address</label>
-          <input type="textarea" id="address" name="address" placeholder="Your address.."
-          name="address" ngModel>
+<div class="html">
+  <h4 id="registration">Your Detail</h4>
+<!-- <div class="form"> -->
 
-          <label for="dob">DOB</label>
-          <input type="date" id="dob" name="dob">
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Your name.." formControlName="name">
+      <div *ngIf="editForm.get('name')?.hasError('required') && editForm.get('name')?.touched">
+        Name is required.
+      </div>
+    </div>
+    <div>
+      <label for="address">Address:</label>
+      <input type="text" id="address" placeholder="Address..." formControlName="address">
+      <div *ngIf="editForm.get('address')?.hasError('required') && editForm.get('address')?.touched">
+        Address is required.
+      </div>
+    </div>
 
-          <label for="role">Role</label>
-          <input type="text" id="role" name="role" placeholder="Your role.."
-          name="role" ngModel>
+    <div>
+      <label for="DOB">DOB:</label>
+      <input type="date" id="DOB" placeholder="DOB..." formControlName="DOB">
+    </div>
 
-          <label for="number">Phone No.</label>
-          <input type="number" id="number" name="number">
-         
-        </div>
-        
-       <br>
-        <label for="gender">Gender:</label>
-        <span class="jh" *ngFor="let gen of gender">
-          <input type="radio" id="{{gen.id}}" value="{{gen.value}}" name="gender" >
-          <label for="male">{{gen.value}}</label>
-        </span>
+    <div>
+      <label for="role">Role:</label>
+      <input type="number" id="role" placeholder="Your Role.." formControlName="role">
+      <div *ngIf="editForm.get('role')?.hasError('required') && editForm.get('role')?.touched">
+        Role is required.
+      </div>
+    </div>
 
-        <br><br>
-      
-        <input type="submit" value="Update" id="btn">
-      </form>
-  </div>
-  
- 
+    <div class="jh">
+      <label>Gender:</label>
+      <div class="jh2" *ngFor="let gender of genders">
+        <label>
+          <input type="radio" [value]="gender" formControlName="gender"> {{ gender }}
+        </label>
+      </div>
+      <div *ngIf="editForm.get('gender')?.hasError('required') && editForm.get('gender')?.touched">
+        Gender is required.
+      </div>
+    </div>
+
+    
+    
+    <!-- Add more form controls as needed -->
+    <button type="submit" id="btn" >Update</button>
+  </form>
+<!-- </div> -->
+</div>

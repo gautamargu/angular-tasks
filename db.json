@@ -2,10 +2,10 @@
     "people": [
         {
             "id": 1,
-            "name": "Vini",
+            "name": "Vinita",
             "address": "Gandhinagar",
             "dob": "2003-01-11",
-            "gender": "Male",
+            "gender": "Female",
             "role": "A"
         },
         {
@@ -18,24 +18,24 @@
         },
         {
             "id": 3,
-            "name": "rohit",
-            "address": "delhi",
+            "name": "Pratap Singh",
+            "address": "Udaipur",
             "dob": "2001-09-21",
             "gender": "Male",
             "role": "A"
         },
         {
             "id": 4,
-            "name": "gauti",
-            "address": "gandhinagar",
+            "name": "Gautam Kumar",
+            "address": "Gandhinagar",
             "dob": "2000-02-29",
-            "gender": "Female",
+            "gender": "Male",
             "role": "C"
         },
         {
             "id": 5,
-            "name": "deepak",
-            "address": "mumbai",
+            "name": "Deepak",
+            "address": "Mumbai",
             "dob": "2002-09-06",
             "gender": "Male",
             "role": "B"

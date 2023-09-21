@@ -7,7 +7,7 @@ import { ViewComponent } from './component/view/view.component';
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'edit' ,component:EditComponent},
-  {path:'view' , component:ViewComponent}
+  {path:'view/:id' , component:ViewComponent}
 ];
 
 @NgModule({

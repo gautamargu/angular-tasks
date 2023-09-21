@@ -27,15 +27,5 @@ export class HomeComponent  implements OnInit{
     
   // ];
 
- 
-
-  editPerson(person: any) {
-    
-  }
-
-  viewPerson(person: any) {
-    
-  }
-
 
 }
