@@ -27,6 +27,7 @@ export class EditComponent implements OnInit {
     if (this.editForm.valid) {
       // Process the form data here, e.g., send it to a service
       console.log('Form submitted:', this.editForm.value);
+      console.log(this.editForm.value.name);
     }
   }
   

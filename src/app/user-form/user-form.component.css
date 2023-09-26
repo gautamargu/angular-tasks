@@ -1,4 +1,4 @@
-.html {
+.user-details{
   background-image: linear-gradient(#FFDEE9,#B5FFFC);
   height: 100vh;
     width: 100vw;
@@ -99,4 +99,9 @@ label input[type="radio"] {
   font-size: 26px;
   font-family: monospace;
   font-weight: bold;
+}
+
+.warning{
+  color: red;
+  font-family: 'Courier New', Courier, monospace;
 }

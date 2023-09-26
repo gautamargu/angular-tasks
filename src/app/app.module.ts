@@ -11,6 +11,7 @@ import { EditComponent } from './component/edit/edit.component';
 import { ViewComponent } from './component/view/view.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { FooterComponent } from './component/footer/footer.component';
+import { UserFormComponent } from './user-form/user-form.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FooterComponent } from './component/footer/footer.component';
     ViewComponent,
     NavbarComponent,
     FooterComponent,
+    UserFormComponent,
   ],
   imports: [
     BrowserModule,

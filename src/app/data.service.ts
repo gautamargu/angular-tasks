@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 export class DataService {
   private apiUrl = 'http://localhost:3000';
   private baseUrl = 'http://localhost:3000/people';
+  
 
   constructor(private http:HttpClient) { }
 
@@ -17,5 +18,12 @@ export class DataService {
   getDataById(id: number): Observable<any> {
     const url = `${this.baseUrl}/${id}`;
     return this.http.get(url);
+  }
+
+  postData(data: any) {
+    return this.http.post<any>(
+      this.baseUrl ,
+      data
+    );
   }
 }
